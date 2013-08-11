@@ -32,3 +32,12 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
+
+# Brilliantly, we are using a different dev db from production
+group :development, :test do
+    gem 'mysql', "~> 2.8.1"
+end
+
+group :staging, :production do
+    gem 'pg', '~> 0.11'
+end

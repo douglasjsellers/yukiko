@@ -1,0 +1,12 @@
+<ul>
+  <% @requests.each do |request| %>
+  <li>
+    <div>
+      <%= request.request %>
+    </div>
+    <div>
+      <%= request.created_at %>
+    </div>
+  </li>
+  <% end %>
+</ul>
